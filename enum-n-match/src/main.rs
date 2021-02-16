@@ -15,10 +15,8 @@ enum Direction {
 fn print_action(a: &Action) {
     match a {
         Drive => println!("Drive forward!"),
-        Turn(direction) => match direction {
-            Left => println!("Turn left"),
-            Right => println!("Turn right"),
-        },
+        Turn(Left) => println!("Turn left"),
+        Turn(Right) => println!("Turn right"),
         Stop => println!("Stop!"),
     }
 }
